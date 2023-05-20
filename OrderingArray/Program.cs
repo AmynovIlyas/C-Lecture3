@@ -3,32 +3,33 @@
 
 int[] array = {1, 5, 4, 3, 2, 6, 7, 1, 1};
 
-void PrintArray(int[] arr)
+void PrintArray(int[] arr1)
 {
-    int count = arr.Length;
-    for(int i = 0; i < count; i++)
+    int count = arr1.Length;
+    for(int i = 0; i < count-1; i++)
     {
-        Console.Write($"{arr[i]}, ");
+        Console.Write($"{arr1[i]}, ");
     } 
+    Console.WriteLine($"{arr1[count-1]}");
     Console.WriteLine();
 }
 
-void SelectionSort(int[] arr)
+void SelectionSort(int[] arr2)
 {
-    for(int i = 0; i < arr.Length - 1; i++)
+    for(int i = 0; i < arr2.Length - 1; i++)
     {
-        int minPosition = 1;
-        for(int j = i + 1; j < arr.Length; j++)
+        int minPosition = i;
+        for(int j = i + 1; j < arr2.Length; j++)
         {
-            if (arr[j] < arr[minPosition])
+            if (arr2[j] < arr2[minPosition])
             {
-                minPosition = j;
+                minPosition = j;    
             }  
         }
 
-        int temporary = arr[i];
-        arr[i] = arr[minPosition];
-        arr[minPosition] = temporary;
+        int temporary = arr2[i];
+        arr2[i] = arr2[minPosition];
+        arr2[minPosition] = temporary;
     }
 }
 
