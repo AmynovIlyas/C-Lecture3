@@ -10,7 +10,7 @@ void PrintArray(int[] arr1)
     {
         Console.Write($"{arr1[i]}, ");
     } 
-    Console.WriteLine($"{arr1[count-1]}");
+    Console.Write($"{arr1[count-1]}");
     Console.WriteLine();
 }
 
@@ -34,5 +34,5 @@ void SelectionSort(int[] arr2)
 }
 
 PrintArray(array);
-SelectionSort(array);
+SelectionSort(array); 
 PrintArray(array);
